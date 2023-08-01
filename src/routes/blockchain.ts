@@ -1,4 +1,3 @@
-// src/routes/blockchain.ts
 /**
  * Transaction represents a transfer of value from one address to another.
  * In this simplified scenario, a transaction has a single recipient.

@@ -1,4 +1,3 @@
-// src/routes/wallet.routes.ts
 import express from 'express';
 import { addTransactionController, getBalanceController, getTransactionHistoryController } from '../controller/transaction';
 

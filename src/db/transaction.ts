@@ -20,6 +20,7 @@ export const getBalance = async ({ address }: Balance) => {
             balance += transaction.amount;
         }
     }
+    return balance
 };
 
 export const getTransactionHistory = async ({ address }: TransactionHistory) => {

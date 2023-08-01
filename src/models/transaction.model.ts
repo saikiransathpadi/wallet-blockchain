@@ -1,4 +1,3 @@
-// src/models/transaction.model.ts
 import mongoose from 'mongoose';
 
 export interface TransactionDocument extends mongoose.Document {

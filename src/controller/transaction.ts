@@ -21,9 +21,11 @@ export const addTransactionController = async (req: Request, res: Response) => {
 export const getBalanceController = async (req: Request, res: Response) => {
     try {
         const address = req.params.address;
+        console.log("getting balance for", address);
+        
         const balance = await getBalance({ address });
 
-        return res.json({ balance });
+        return res.status(200).json({ balance });
     } catch (error) {
         console.error('Error getting balance:', error);
         return res.status(500).json({ error: 'Internal Server Error' });
@@ -35,7 +37,7 @@ export const getTransactionHistoryController = async (req: Request, res: Respons
         const address = req.params.address;
         const transactions = await getTransactionHistory({ address });
 
-        return res.json({ transactions });
+        return res.status(200).json({ transactions });
     } catch (error) {
         console.error('Error fetching transaction history:', error);
         return res.status(500).json({ error: 'Internal Server Error' });
